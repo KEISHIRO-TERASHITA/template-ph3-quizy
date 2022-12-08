@@ -20,6 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('quiz/{big_question_id?}', 'QuizController@index');
+Route::get('test', 'QuizController@test');
 
 Route::get('hello', 'HelloController@index')->middleware(HelloMiddleware::class);
 Route::post('hello', 'HelloController@post');
