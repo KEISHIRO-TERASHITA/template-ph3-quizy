@@ -1,4 +1,8 @@
 @charset "UTF-8";
+body {
+  padding-bottom: 120px;
+}
+
 .hidden {
   display: none;
 }

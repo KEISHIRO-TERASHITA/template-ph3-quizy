@@ -12,6 +12,7 @@ class questionsTableSeeder extends Seeder
     public function run()
     {
         //
+        DB::table('questions')->truncate();
         $param = [
             'big_question_id' => 1,
             'image' => 'takanawa'

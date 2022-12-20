@@ -12,6 +12,7 @@ class big_questionsTableSeeder extends Seeder
     public function run()
     {
         //
+        DB::table('big_questions')->truncate();
         $param = [
             'title' => 'ガチで東京の人しか解けない！ #東京の難読地名クイズ'
         ];
