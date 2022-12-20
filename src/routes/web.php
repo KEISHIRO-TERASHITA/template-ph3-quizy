@@ -11,16 +11,16 @@
 |
 */
 
-use App\Http\Controllers\HelloController;
 use App\Http\Middleware\HelloMiddleware;
 
 
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('quiz', 'QuizController@index');
 
-Route::get('quiz/{big_question_id?}', 'QuizController@index');
-Route::get('test', 'QuizController@test');
+Route::get('quiz/{big_question_id}', 'QuizController@quiz');
+
 
 Route::get('hello', 'HelloController@index')->middleware(HelloMiddleware::class);
 Route::post('hello', 'HelloController@post');

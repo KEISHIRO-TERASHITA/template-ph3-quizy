@@ -12,6 +12,7 @@ class choicesTableSeeder extends Seeder
     public function run()
     {
         //
+        DB::table('choices')->truncate();
         $param = [
             'question_id' => 1,
             'choice' => 'たかなわ',
