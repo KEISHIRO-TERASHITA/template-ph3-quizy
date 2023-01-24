@@ -21,6 +21,13 @@ Route::get('quiz', 'QuizController@index');
 
 Route::get('quiz/{big_question_id}', 'QuizController@quiz');
 
-
 Route::get('hello', 'HelloController@index')->middleware(HelloMiddleware::class);
 Route::post('hello', 'HelloController@post');
+
+Auth::routes();
+
+Route::get('/logout', function(){
+    return Auth::logout();
+});
+
+Route::get('/home', 'HomeController@index')->name('home');
