@@ -8,7 +8,7 @@ class Big_question extends Model
 {
     // id で検索
     public function scopeSelectById($query, $id){
-        return $query->where('id', $id);
+        return $query->find($id);
     }
 
     // タイトルを返す
