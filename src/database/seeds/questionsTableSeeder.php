@@ -15,7 +15,7 @@ class questionsTableSeeder extends Seeder
         DB::table('questions')->truncate();
         $param = [
             'big_question_id' => 1,
-            'image' => 'takanawa'
+            'image' => 'takanawa',
         ];
         DB::table('questions')->insert($param);
 
