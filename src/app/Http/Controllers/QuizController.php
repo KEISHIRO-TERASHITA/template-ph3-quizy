@@ -13,7 +13,7 @@ class QuizController extends Controller
     //
     public function index()
     {
-        $items = Big_question::all();
+        $items = Big_question::show()->get();
         return view('kuizy.home', compact('items'));
     }
     public function quiz($big_question_id)
