@@ -17,6 +17,9 @@
     @endforeach
   </ul>
   <button>
+    <a href="/admin/change_title_order">change order</a>
+  </button>
+  <button>
     <a href="/admin/create_big_question">create big question</a>
   </button>
 @endsection

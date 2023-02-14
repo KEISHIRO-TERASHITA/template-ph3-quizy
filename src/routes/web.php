@@ -50,6 +50,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin'], function(){
     Route::get('/delete_big_question/{big_question_id}', 'AdminController@delete_big_question');
     // 大問削除
     Route::get('/delete_title/{big_question_id}', 'AdminController@delete_title');
+    Route::get('/change_title_order', 'AdminController@change_title_order');
 }
 );
 

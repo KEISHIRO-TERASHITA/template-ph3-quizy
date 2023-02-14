@@ -12,7 +12,7 @@ class Big_question extends Model
 
     public function scopeShow ($query)
     {
-        return $query->where('deleted_at',null);
+        return $query->where('deleted_at',null)->orderBy('order', 'asc');
     }
 
     // id で検索

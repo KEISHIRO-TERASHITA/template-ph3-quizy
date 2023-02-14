@@ -66,5 +66,13 @@ class AdminController extends Controller
         return(redirect('/admin'));
     }
 
+    public function change_title_order(){
+        $items = Big_question::show()->get();
+        return view('admin/changeTitleOrder', compact('items'));
+    }
+
     // 小問ここから
+    public function show_questions($big_question_id){
+        
+    }
 }
