@@ -70,6 +70,15 @@ class AdminController extends Controller
         $items = Big_question::show()->get();
         return view('admin/changeTitleOrder', compact('items'));
     }
+    public function post_changed_title_order(Request $request){
+        $big_questions = Big_question::show()->get();
+        foreach($big_questions as $big_question){
+            $big_question->order = $request['order_' . $big_question->id()];
+            $big_question->updated_at = new DateTime('now');
+            $big_question->save();
+        }
+        return(redirect('/admin'));
+    }
 
     // 小問ここから
     public function show_questions($big_question_id){

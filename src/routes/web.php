@@ -46,11 +46,15 @@ Route::group(['prefix' => 'admin', 'as' => 'admin'], function(){
     // 大問タイトル変更確定
     Route::post('/edit_title/{big_question_id}', 'AdminController@store_edited_title');
 
+    // 大問順序変更
+    Route::get('/title/change_order', 'AdminController@change_title_order');
+    // 大問順序変更確定
+    Route::post('/title/change_order', 'AdminController@post_changed_title_order');
+
     // 大問削除確認
     Route::get('/delete_big_question/{big_question_id}', 'AdminController@delete_big_question');
     // 大問削除
     Route::get('/delete_title/{big_question_id}', 'AdminController@delete_title');
-    Route::get('/change_title_order', 'AdminController@change_title_order');
 }
 );
 
