@@ -6,7 +6,7 @@
 <ul>
   @foreach($items as $item)
   <li>
-    <a href="/quiz/{{$loop->iteration}}">{{$item->title()}}</a>
+    <a href="/quiz/{{$item->id}}">{{$item->title()}}</a>
   </li>
   @endforeach
 </ul>
