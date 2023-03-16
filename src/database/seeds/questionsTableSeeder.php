@@ -16,24 +16,28 @@ class questionsTableSeeder extends Seeder
         $param = [
             'big_question_id' => 1,
             'image' => 'takanawa',
+            'created_at' => new dateTime('now'),
         ];
         DB::table('questions')->insert($param);
 
         $param = [
             'big_question_id' => 1,
-            'image' => 'kameido'
+            'image' => 'kameido',
+            'created_at' => new dateTime('now'),
         ];
         DB::table('questions')->insert($param);
 
         $param = [
             'big_question_id' => 1,
-            'image' => 'koujimachi'
+            'image' => 'koujimachi',
+            'created_at' => new dateTime('now'),
         ];
         DB::table('questions')->insert($param);
 
         $param = [
             'big_question_id' => 2,
-            'image' => 'mukainada'
+            'image' => 'mukainada',
+            'created_at' => new dateTime('now'),
         ];
         DB::table('questions')->insert($param);
     }

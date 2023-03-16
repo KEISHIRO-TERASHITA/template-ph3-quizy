@@ -16,76 +16,88 @@ class choicesTableSeeder extends Seeder
         $param = [
             'question_id' => 1,
             'choice' => 'たかなわ',
-            'value' => true
+            'value' => true,
+            'created_at' => new dateTime('now'),
         ];
         DB::table('choices')->insert($param);
         $param = [
             'question_id' => 1,
             'choice' => 'たかわ',
-            'value' => false
+            'value' => false,
+            'created_at' => new dateTime('now'),
         ];
         DB::table('choices')->insert($param);
         $param = [
             'question_id' => 1,
             'choice' => 'こうわ',
-            'value' => false
+            'value' => false,
+            'created_at' => new dateTime('now'),
         ];
         DB::table('choices')->insert($param);
 
         $param = [
             'question_id' => 2,
             'choice' => 'かめいど',
-            'value' => true
+            'value' => true,
+            'created_at' => new dateTime('now'),
         ];
         DB::table('choices')->insert($param);
         $param = [
             'question_id' => 2,
             'choice' => 'かめと',
-            'value' => false
+            'value' => false,
+            'created_at' => new dateTime('now'),
         ];
         DB::table('choices')->insert($param);
         $param = [
             'question_id' => 2,
             'choice' => 'かめど',
-            'value' => false
+            'value' => false,
+            'created_at' => new dateTime('now'),
         ];
         DB::table('choices')->insert($param);
 
         $param = [
             'question_id' => 3,
             'choice' => 'こうじまち',
-            'value' => true
+            'value' => true,
+            'created_at' => new dateTime('now'),
         ];
         DB::table('choices')->insert($param);
         $param = [
             'question_id' => 3,
             'choice' => 'おかとまち',
-            'value' => false
+            'value' => false,
+            'created_at' => new dateTime('now'),
         ];
         DB::table('choices')->insert($param);
         $param = [
             'question_id' => 3,
             'choice' => 'かゆまち',
-            'value' => false
+            'value' => false,
+            'created_at' => new dateTime('now'),
         ];
         DB::table('choices')->insert($param);
 
         $param = [
             'question_id' => 4,
             'choice' => 'むかいなだ',
-            'value' => true
+            'value' => true,
+            'created_at' => new dateTime('now'),
         ];
         DB::table('choices')->insert($param);
         $param = [
             'question_id' => 4,
             'choice' => 'むきひら',
-            'value' => false
+            'value' => false,
+            'created_at' => new dateTime('now'),
         ];
         DB::table('choices')->insert($param);
         $param = [
             'question_id' => 4,
             'choice' => 'むこうひら',
-            'value' => false
+            'value' => false,
+            'created_at' => new dateTime('now'),
         ];
         DB::table('choices')->insert($param);
     }

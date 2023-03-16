@@ -18,6 +18,7 @@ class CreateChoicesTable extends Migration
             $table->integer('question_id');
             $table->text('choice');
             $table->boolean('value');
+            $table->timestamps();
         });
     }
 

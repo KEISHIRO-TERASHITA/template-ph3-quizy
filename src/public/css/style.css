@@ -34,6 +34,13 @@ main {
   margin-top: 10px;
 }
 
+.img_container {
+  width: 100%;
+}
+.img_container img {
+  width: 100%;
+}
+
 /* 選択肢(選択前)の体裁 */
 .choice_box {
   list-style-type: none;

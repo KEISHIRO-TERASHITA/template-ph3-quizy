@@ -1,17 +1,21 @@
 @extends('layouts.kuizy')
 
-@section('title', $items->title())
+@section('title', $title)
 
 @section('script',)
   <script src="{{ asset('/js/quiz.js') }}" defer></script>
 
 
 @section('content')
-  @foreach($items->Questions as $question)
+  @foreach($items as $question)
     <section class="question_container">
       <h1 class="title">{{$loop->iteration}}. この地名はなんと読む？</h1>
       <div class="img_container">
-        <img src=/img/{{$question->img()}}.png>
+        @if($question->default)
+          <img src=/img/{{$question->img()}}.png>
+        @else
+          <img src="{{ asset('storage/img/'.$question->img())}}">
+        @endif
       </div>
       <ul class="choice_box">
         @foreach($question->Choices as $choice)

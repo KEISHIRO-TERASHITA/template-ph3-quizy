@@ -18,7 +18,8 @@ class QuizController extends Controller
     }
     public function quiz($big_question_id)
     {
-        $items = Big_question::selectById($big_question_id);
-        return view('kuizy.quiz', compact('big_question_id', 'items'));
+        $title = Big_question::find($big_question_id)->title;
+        $items = Question::show()->where('big_question_id', $big_question_id)->get();
+        return view('kuizy.quiz', compact('big_question_id', 'title', 'items'));
     }
 }

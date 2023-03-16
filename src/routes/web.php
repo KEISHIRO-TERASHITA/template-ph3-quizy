@@ -55,14 +55,27 @@ Route::group(['prefix' => 'admin', 'as' => 'admin'], function(){
     Route::get('/delete_big_question/{big_question_id}', 'AdminController@delete_big_question');
     // 大問削除
     Route::get('/delete_title/{big_question_id}', 'AdminController@delete_title');
+
+    // 小問
+    // 小問一覧
+    Route::get('/show/{big_question_id}', 'AdminController@show_questions');
+
+    // 小問追加
+    Route::get('/create_question/{big_question_id}', 'AdminController@create_question');
+    Route::post('/create_question/{big_question_id}', 'AdminController@post_question');
+
+    // 小問順序変更
+    Route::post('/show/{big_question_id}', 'AdminController@change_questions_order');
+
+    // 小問編集
+    Route::get('/edit_question/{question_id}', 'AdminController@edit_question');
+    Route::post('/edit_question/{question_id}', 'AdminController@store_edited_question');
+
+    // 小問削除
+    Route::get('/delete_question/{question_id}', 'AdminController@delete_check_question');
+    Route::post('/delete_question/{question_id}', 'AdminController@delete_question');
 }
 );
-
-// 小問
-Route::group(['prefix' => 'admin', 'as' => 'admin'], function (){
-    // 小問一覧
-    Route::get('/show/{$big_question_id}', 'AdminController@show_questions');
-});
 
 Auth::routes();
 

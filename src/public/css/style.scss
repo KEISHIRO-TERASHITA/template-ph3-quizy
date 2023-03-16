@@ -32,6 +32,14 @@ main {
   margin-top: 10px;
 }
 
+// 問題画像
+.img_container{
+  width: 100%;
+  img{
+    width: 100%;
+  }
+}
+
 /* 選択肢(選択前)の体裁 */
 .choice_box {
   list-style-type: none;
